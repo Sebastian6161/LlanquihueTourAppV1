@@ -62,8 +62,8 @@ Abrir Main.java
 
 Ejecutar Main.main()
 
-
-
+👤 Autor
+Sebastián Ignacio Ávila Sanhueza
 
 
 
