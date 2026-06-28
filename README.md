@@ -1,9 +1,9 @@
 # 🗺️ LlanquihueTourApp - Agencia de Turismo
 
 ## 📝 Descripción
-Proyecto desarrollado para la actividad formativa **"Creando jerarquías de clases con herencia simple"** correspondiente a la semana 6 de la asignatura **Desarrollo Orientado a Objetos I** en Duoc UC.
+Proyecto desarrollado para la actividad "Creando jerarquías de clases con herencia simple" de la asignatura Desarrollo Orientado a Objetos I.
 
-El objetivo principal de esta etapa fue diseñar e implementar una jerarquía de clases robusta utilizando el concepto de herencia en Java. Esto permite modelar de manera eficiente los diferentes tipos de servicios turísticos ofrecidos por la agencia **Llanquihue Tour**, centralizando los atributos comunes en una superclase y especializando el comportamiento en sus respectivas subclases.
+El objetivo fue implementar una jerarquía de clases utilizando herencia, reutilizando atributos comunes y especializando funcionalidades para distintos servicios turísticos ofrecidos por la agencia Llanquihue Tour.
 
 ---
 
@@ -27,6 +27,7 @@ src/
 🛠️ Clases y Componentes Creados:
 
 Paquete model:
+
 ServicioTuristico (Superclase): Define la base de cualquier servicio con los atributos comunes: nombre (String) y duracionHoras (int).
 
 RutaGastronomica (Subclase): Extiende la funcionalidad base agregando el atributo específico numeroDeParadas (int).
@@ -36,32 +37,37 @@ PaseoLacustre (Subclase): Extiende la funcionalidad base agregando el atributo e
 ExcursionCultural (Subclase): Extiende la funcionalidad base agregando el atributo específico lugarHistorico (String).
 
 Paquete data:
+
 GestorServicios: Clase encargada de la lógica de prueba. Instancia dos objetos únicos por cada una de las subclases (6 servicios en total) y gestiona su despliegue estructurado.
 
 Paquete ui:
+
 Main: Contiene el método ejecutable principal (main) que inicializa el flujo del programa.
 
-✨ Funcionalidades e Impacto Técnico
-Herencia Simple: Implementación limpia mediante la palabra clave extends.
+✨ Funcionalidades implementadas
 
-Reutilización de Constructores: Uso explícito de super(...) en las subclases para inicializar de forma correcta los atributos heredados de la superclase.
+Herencia simple mediante una superclase.
 
-Sobrescritura Polimórfica: Uso de la anotación @Override en el método toString() de las subclases, invocando dinámicamente a super.toString() para complementar los datos específicos de cada servicio sin duplicar código.
+Uso de atributos heredados.
 
-Consistencia Arquitectónica: Separación de la interfaz de usuario, los datos simulados y el modelo de negocio.
+Uso de super() en constructores.
 
-🚀 Instrucciones de Ejecución
-Para clonar y ejecutar este proyecto de manera local, sigue estos pasos:
+Sobrescritura del método toString().
 
-Clona el repositorio en tu máquina local.
+Creación de objetos de prueba.
 
-Abre la carpeta del proyecto LlanquihueTourApp utilizando tu IDE preferido (ej: IntelliJ IDEA).
+Visualización de resultados por consola.
 
-Asegúrate de tener configurado un JDK compatible (Java 8 o superior).
+🚀 Para ejecutar el proyecto:
 
-Navega en el árbol de carpetas hasta el archivo src/ui/Main.java.
 
-Haz clic derecho sobre el archivo y selecciona Run 'Main.main()'.
+Abrir el proyecto en IntelliJ IDEA.
+
+Ir al paquete ui.
+
+Abrir Main.java
+
+Ejecutar Main.main()
 
 
 
