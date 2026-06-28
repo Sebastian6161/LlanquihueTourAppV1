@@ -24,8 +24,9 @@ src/
     └── Main.java                  # Punto de entrada de la aplicación
 ```
 
-🛠️ Clases y Componentes Creados
-Paquete model
+🛠️ Clases y Componentes Creados:
+
+Paquete model:
 ServicioTuristico (Superclase): Define la base de cualquier servicio con los atributos comunes: nombre (String) y duracionHoras (int).
 
 RutaGastronomica (Subclase): Extiende la funcionalidad base agregando el atributo específico numeroDeParadas (int).
@@ -34,10 +35,10 @@ PaseoLacustre (Subclase): Extiende la funcionalidad base agregando el atributo e
 
 ExcursionCultural (Subclase): Extiende la funcionalidad base agregando el atributo específico lugarHistorico (String).
 
-Paquete data
+Paquete data:
 GestorServicios: Clase encargada de la lógica de prueba. Instancia dos objetos únicos por cada una de las subclases (6 servicios en total) y gestiona su despliegue estructurado.
 
-Paquete ui
+Paquete ui:
 Main: Contiene el método ejecutable principal (main) que inicializa el flujo del programa.
 
 ✨ Funcionalidades e Impacto Técnico
