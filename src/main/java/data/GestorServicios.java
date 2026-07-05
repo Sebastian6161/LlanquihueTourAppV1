@@ -3,52 +3,82 @@ package data;
 import model.ExcursionCultural;
 import model.PaseoLacustre;
 import model.RutaGastronomica;
+import model.ServicioTuristico;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GestorServicios {
 
-    public void mostrarServicios() {
+    private List<ServicioTuristico> servicios;
+
+    public GestorServicios() {
+
+        servicios = new ArrayList<>();
 
         // Rutas gastronómicas
-        RutaGastronomica ruta1 =
-                new RutaGastronomica("Ruta Sabores del Sur", 4, 5);
+        servicios.add(
+                new RutaGastronomica(
+                        "Ruta Sabores del Sur",
+                        4,
+                        5)
+        );
 
-        RutaGastronomica ruta2 =
-                new RutaGastronomica("Ruta Tradiciones Chilotas", 3, 4);
+        servicios.add(
+                new RutaGastronomica(
+                        "Ruta Tradiciones Chilotas",
+                        3,
+                        4)
+        );
 
         // Paseos lacustres
-        PaseoLacustre paseo1 =
-                new PaseoLacustre("Paseo Lago Llanquihue", 2, "Catamarán");
+        servicios.add(
+                new PaseoLacustre(
+                        "Paseo Lago Llanquihue",
+                        2,
+                        "Catamarán")
+        );
 
-        PaseoLacustre paseo2 =
-                new PaseoLacustre("Navegación Volcánica", 3, "Lancha");
+        servicios.add(
+                new PaseoLacustre(
+                        "Navegación Volcánica",
+                        3,
+                        "Lancha")
+        );
 
         // Excursiones culturales
-        ExcursionCultural excursion1 =
-                new ExcursionCultural("Historia de Frutillar", 2,
-                        "Museo Colonial Alemán");
+        servicios.add(
+                new ExcursionCultural(
+                        "Historia de Frutillar",
+                        2,
+                        "Museo Colonial Alemán")
+        );
 
-        ExcursionCultural excursion2 =
-                new ExcursionCultural("Patrimonio Local", 4,
-                        "Teatro del Lago");
+        servicios.add(
+                new ExcursionCultural(
+                        "Patrimonio Local",
+                        4,
+                        "Teatro del Lago")
+        );
 
-        // Mostrar resultados
+    }
+    public List<ServicioTuristico> obtenerServicios() {
+        return servicios;
+    }
+
+    public void mostrarServicios() {
+
         System.out.println("========================================");
         System.out.println("      SERVICIOS TURÍSTICOS");
         System.out.println("========================================\n");
 
-        System.out.println("=== RUTAS GASTRONÓMICAS ===");
-        System.out.println(ruta1);
-        System.out.println();
-        System.out.println(ruta2);
+        for (ServicioTuristico servicio : servicios) {
 
-        System.out.println("\n=== PASEOS LACUSTRES ===");
-        System.out.println(paseo1);
-        System.out.println();
-        System.out.println(paseo2);
+            servicio.mostrarInformacion();
 
-        System.out.println("\n=== EXCURSIONES CULTURALES ===");
-        System.out.println(excursion1);
-        System.out.println();
-        System.out.println(excursion2);
+            System.out.println("--------------------------------");
+        }
+
     }
+
 }

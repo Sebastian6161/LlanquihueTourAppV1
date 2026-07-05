@@ -1,6 +1,7 @@
 package ui;
 
 import data.GestorServicios;
+import model.ServicioTuristico;
 
 public class Main {
 
@@ -8,7 +9,12 @@ public class Main {
 
         GestorServicios gestor = new GestorServicios();
 
-        gestor.mostrarServicios();
+        for (ServicioTuristico servicio :
+                gestor.obtenerServicios()) {
 
+            servicio.mostrarInformacion();
+
+            System.out.println("--------------------------------");
+        }
     }
 }
