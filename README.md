@@ -1,68 +1,61 @@
-# 🗺️ LlanquihueTourApp - Agencia de Turismo
+# LlanquihueTourApp
 
-## 📝 Descripción
-Proyecto desarrollado para la actividad "Creando jerarquías de clases con herencia simple" de la asignatura Desarrollo Orientado a Objetos I.
+Proyecto desarrollado para la asignatura **Desarrollo Orientado a Objetos I**.
 
-El objetivo fue implementar una jerarquía de clases utilizando herencia, reutilizando atributos comunes y especializando funcionalidades para distintos servicios turísticos ofrecidos por la agencia Llanquihue Tour.
+## Descripción
 
----
+LlanquihueTourApp es una aplicación en Java que representa distintos servicios turísticos de la agencia Llanquihue Tour mediante programación orientada a objetos.
 
-## 📂 Organización de Carpetas (Paquetes)
+En esta versión (Semana 7) se incorporó el uso de polimorfismo y colecciones genéricas para gestionar distintos tipos de servicios turísticos desde una misma lista.
 
-El proyecto está ordenado en tres carpetas según su función:
-```text
-src/
-├── model/     # Contiene las plantillas de los servicios turísticos
-├── data/      # Contiene los datos de prueba para revisar que todo funcione
-└── ui/        # Contiene el archivo principal para iniciar el programa
+## Funcionalidades implementadas
+
+- Herencia mediante la superclase `ServicioTuristico`.
+- Subclases:
+  - RutaGastronomica
+  - PaseoLacustre
+  - ExcursionCultural
+- Sobrescritura del método `mostrarInformacion()`.
+- Uso de `@Override`.
+- Gestión de servicios mediante `List<ServicioTuristico>`.
+- Aplicación de polimorfismo al recorrer la colección.
+- Organización del proyecto en paquetes:
+  - model
+  - data
+  - ui
+
+## Estructura del proyecto
+
+```
+src
+│
+├── model
+│   ├── ServicioTuristico.java
+│   ├── RutaGastronomica.java
+│   ├── PaseoLacustre.java
+│   └── ExcursionCultural.java
+│
+├── data
+│   └── GestorServicios.java
+│
+└── ui
+    └── Main.java
 ```
 
-🛠️ Clases y Componentes Creados:
+## Requisitos
 
-Paquete model:
+- Java JDK 23 o superior.
+- IntelliJ IDEA (recomendado).
 
-ServicioTuristico (Superclase): Define la base de cualquier servicio con los atributos comunes: nombre (String) y duracionHoras (int).
+## Cómo ejecutar
 
-RutaGastronomica (Subclase): Extiende la funcionalidad base agregando el atributo específico numeroDeParadas (int).
+1. Clonar el repositorio.
+2. Abrir el proyecto en IntelliJ IDEA.
+3. Ejecutar la clase `Main` ubicada en el paquete `ui`.
+4. El sistema mostrará por consola la información de todos los servicios turísticos utilizando polimorfismo.
 
-PaseoLacustre (Subclase): Extiende la funcionalidad base agregando el atributo específico tipoEmbarcacion (String).
+## Autor
 
-ExcursionCultural (Subclase): Extiende la funcionalidad base agregando el atributo específico lugarHistorico (String).
-
-Paquete data:
-
-GestorServicios: Clase encargada de la lógica de prueba. Instancia dos objetos únicos por cada una de las subclases (6 servicios en total) y gestiona su despliegue estructurado.
-
-Paquete ui:
-
-Main: Contiene el método ejecutable principal (main) que inicializa el flujo del programa.
-
-✨ Funcionalidades implementadas
-
-Herencia simple mediante una superclase.
-
-Uso de atributos heredados.
-
-Uso de super() en constructores.
-
-Sobrescritura del método toString().
-
-Creación de objetos de prueba.
-
-Visualización de resultados por consola.
-
-🚀 Para ejecutar el proyecto:
-
-
-Abrir el proyecto en IntelliJ IDEA.
-
-Ir al paquete ui.
-
-Abrir Main.java
-
-Ejecutar Main.main()
-
-👤 Autor
 Sebastián Ignacio Ávila Sanhueza
 
 
